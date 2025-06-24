@@ -1,0 +1,225 @@
+/* === GLOBAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background-color: #111;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* === HERO === */
+.hero {
+  background: url('https://wallpapers.com/images/hd/cool-soccer-desktop-blue-red-white-npz7kj8t2x9v8a7p.jpg') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00ff91;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero-content {
+  text-align: center;
+  margin-top: auto;
+  padding-bottom: 60px;
+}
+
+.hero-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 24px;
+  margin: 0 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #00ff91;
+  color: #000;
+}
+
+.btn.primary:hover {
+  background-color: #00cc73;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid #00ff91;
+  color: #00ff91;
+}
+
+.btn.secondary:hover {
+  background-color: #00ff91;
+  color: #000;
+}
+
+/* === SECTIONS === */
+.dark {
+  background-color: #111;
+  color: #fff;
+}
+
+.form-section {
+  background-color: #1a1a1a;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  background-color: #00ff91;
+  color: #000;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00cc73;
+}
+
+/* === MENSAJES === */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #222;
+  padding: 15px;
+  border-left: 4px solid #00ff91;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.card-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-buttons .edit {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.card-buttons .edit:hover {
+  background-color: #0056b3;
+}
+
+.card-buttons .delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.card-buttons .delete:hover {
+  background-color: #a71d2a;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #000;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}

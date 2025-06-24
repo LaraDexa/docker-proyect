@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Football Game | Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="overlay">
+      <header>
+        <h1 class="logo">FOOTBALL<span>GAME</span></h1>
+        <nav>
+          <a href="#about">Nosotros</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+      </header>
+
+      <div class="hero-content">
+        <h2>¡Vive el fútbol como nunca!</h2>
+        <p>Conéctate con la comunidad futbolera, comparte tu pasión y únete al juego.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn primary">Comenzar</a>
+          <a href="#messages" class="btn secondary">Ver mensajes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="section dark">
+    <h2>¿Quiénes somos?</h2>
+    <p>Somos una comunidad apasionada por el fútbol que impulsa partidos locales, torneos y experiencias únicas para jugadores y fans.</p>
+  </section>
+
+  <section id="contact" class="section form-section">
+    <h2>Contáctanos</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Nombre completo" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="tel" name="phone" placeholder="Teléfono" required>
+      <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit" id="submitBtn">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <section id="messages" class="section dark">
+    <h2>📋 Mensajes Recibidos</h2>
+    <div id="messagesContainer" class="cards"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Football Game. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
