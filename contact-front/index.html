@@ -5,7 +5,8 @@
   <title>Football Game | Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -19,7 +20,7 @@
         </nav>
       </header>
 
-      <div class="hero-content">
+      <div class="hero-content container">
         <h2>¡Vive el fútbol como nunca!</h2>
         <p>Conéctate con la comunidad futbolera, comparte tu pasión y únete al juego.</p>
         <div class="hero-buttons">
@@ -30,31 +31,35 @@
     </div>
   </div>
 
-  <section id="about" class="section dark">
+  <section id="about" class="section dark container">
     <h2>¿Quiénes somos?</h2>
     <p>Somos una comunidad apasionada por el fútbol que impulsa partidos locales, torneos y experiencias únicas para jugadores y fans.</p>
   </section>
 
-  <section id="contact" class="section form-section">
+  <section id="contact" class="section form-section container">
     <h2>Contáctanos</h2>
-    <form id="contactForm">
+    <form id="contactForm" novalidate>
       <input type="text" name="name" placeholder="Nombre completo" required>
       <input type="email" name="email" placeholder="Correo electrónico" required>
       <input type="tel" name="phone" placeholder="Teléfono" required>
       <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
+
+      <label class="checkbox-terms">
+        <input type="checkbox" id="termsCheckbox" required>
+        Acepto el <a href="privacy.html" target="_blank">aviso de privacidad</a> y los <a href="terms.html" target="_blank">términos y condiciones</a>
+      </label>
+
+      <!-- Reemplaza el sitekey por el tuyo válido -->
+      <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUÍ" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
+
       <button type="submit" id="submitBtn">Enviar mensaje</button>
     </form>
-  </section>
-
-  <section id="messages" class="section dark">
-    <h2>📋 Mensajes Recibidos</h2>
-    <div id="messagesContainer" class="cards"></div>
   </section>
 
   <footer>
     <p>© 2025 Football Game. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

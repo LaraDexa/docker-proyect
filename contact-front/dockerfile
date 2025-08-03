@@ -1,0 +1,14 @@
+# Dockerfile para servir HTML estático con Nginx
+FROM nginx:alpine
+
+# Copia todo el sitio estático al contenido que sirve Nginx
+COPY . /usr/share/nginx/html
+
+EXPOSE 3180
+
+# Healthcheck opcional: verifica que exista el index.html
+# HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=2 \
+#   CMD [ "sh", "-c", "test -f /usr/share/nginx/html/index.html" ]
+
+# Arranca Nginx en primer plano
+CMD ["nginx", "-g", "daemon off;"]
