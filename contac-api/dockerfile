@@ -1,0 +1,25 @@
+FROM node:18-alpine
+
+# Crear usuario no root por seguridad
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+WORKDIR /usr/src/app
+
+# Copiar solo los package*.json primero para aprovechar cache
+COPY package*.json ./
+
+# Instalación reproducible (usa package-lock.json)
+RUN npm ci --omit=dev
+
+# Copiar el resto del código (no se debe incluir .env aquí, se pasa desde fuera)
+COPY . .
+
+# Ajustar permisos
+RUN chown -R appuser:appgroup /usr/src/app
+
+# Usar usuario no root
+USER appuser
+
+EXPOSE 2294
+
+CMD ["node", "index.js"]
