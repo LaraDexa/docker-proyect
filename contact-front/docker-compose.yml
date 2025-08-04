@@ -1,0 +1,8 @@
+services:
+  frontend:
+    build:
+      context: .             # el punto es “esta carpeta” (contact-front/)
+      dockerfile: Dockerfile # apunta al Dockerfile que ya renombraste
+    container_name: static-frontend
+    ports:
+      - "2294:2294"          # mapea host:contenedor → 2294:2294
